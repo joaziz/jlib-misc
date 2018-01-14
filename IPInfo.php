@@ -7,8 +7,15 @@ namespace Jlib\Misc;
  * Date: 15/01/18
  * Time: 12:45 ص
  */
+/**
+ * Class IPInfo
+ * @package Jlib\Misc
+ */
 class IPInfo
 {
+    /**
+     * @var
+     */
     private $ip;
     private $supportTypes = ["country", "countrycode", "state", "region", "city", "location", "address"];
     private $continents = ["AF" => "Africa", "AN" => "Antarctica", "AS" => "Asia", "EU" => "Europe", "OC" => "Australia (Oceania)", "NA" => "North America", "SA" => "South America"];
@@ -117,6 +124,10 @@ class IPInfo
         return implode(", ", array_reverse($address));
     }
 
+    /**
+     * @param string $purpose
+     * @return null
+     */
     public function get($purpose = "location")
     {
         if (!$this->hasData) return null;
@@ -132,7 +143,9 @@ class IPInfo
 
     }
 
-
+    /**
+     * @return mixed
+     */
     private function featchData()
     {
         $this->rowData = @json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=" . $this->ip));
@@ -145,6 +158,9 @@ class IPInfo
 
     }
 
+    /**
+     * @return string
+     */
     public function __toString()
     {
         return json_encode($this->rowData);

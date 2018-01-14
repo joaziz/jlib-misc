@@ -1,0 +1,16 @@
+{
+    "name": "jlib/misc",
+    "description": "some class to help",
+    "type": "class",
+    "license": "MIT",
+  "require": {
+        "php": ">=7.0.0"
+},
+    "authors": [
+        {
+            "name": "yousif aziz",
+            "email": "en.yousif.aziz@gmail.com"
+        }
+    ]
+  
+}

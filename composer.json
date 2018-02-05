@@ -1,16 +1,20 @@
 {
-    "name": "jlib/misc",
-    "description": "some class to help",
-    "type": "class",
-    "license": "MIT",
+  "name": "jlib/misc",
+  "description": "some class to help",
+  "type": "class",
+  "license": "MIT",
   "require": {
-        "php": ">=7.0.0"
-},
-    "authors": [
-        {
-            "name": "yousif aziz",
-            "email": "en.yousif.aziz@gmail.com"
-        }
-    ]
-  
+    "php": ">=7.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Jlib\\Misc\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "yousif aziz",
+      "email": "en.yousif.aziz@gmail.com"
+    }
+  ]
 }

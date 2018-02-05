@@ -9,7 +9,7 @@
 namespace Jlib\Misc;
 
 
-class PhpFileCreator
+class PhpArrayFileCreator
 {
     public static function createFile($file, $array = [], $return = false)
     {

@@ -89,32 +89,32 @@ class IPInfo
         );
     }
 
-    private function getCountry()
+    public function getCountry()
     {
         return @$this->rowData->geoplugin_countryName;
     }
 
-    private function getCity()
+    public  function getCity()
     {
         return @$this->rowData->geoplugin_city;
     }
 
-    private function getState()
+    public  function getState()
     {
         return @$this->rowData->geoplugin_regionName;
     }
 
-    private function getRegion()
+    public  function getRegion()
     {
         return $this->getState();
     }
 
-    private function getCountrycode()
+    public  function getCountrycode()
     {
         return @$this->rowData->geoplugin_countryCode;
     }
 
-    private function getAddress()
+    public  function getAddress()
     {
         $address = array($this->rowData->geoplugin_countryName);
         if (@strlen($this->rowData->geoplugin_regionName) >= 1)
@@ -128,7 +128,7 @@ class IPInfo
      * @param string $purpose
      * @return null
      */
-    public function get($purpose = "location")
+    public  function get($purpose = "location")
     {
         if (!$this->hasData) return null;
 

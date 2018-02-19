@@ -9,7 +9,7 @@
 namespace Jlib\Misc;
 
 
-class ClassModifire
+class ClassModifier
 {
     public static function extractNamespaceFromFile($src)
     {
